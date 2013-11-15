@@ -1,5 +1,6 @@
 # Avoid archives of this distribution
 \bAstro-Nova-\d+\.\d+(?:_\d+)?\.tar\.gz$
+\bAstro-Nova-\d+\.\d+(?:_\d+)?\/
 
 # Avoid version control files.
 \bRCS\b
@@ -62,8 +63,8 @@ libnova-0.15.0\/src\/.deps
 libnova-0.15.0\/src\/Makefile$
 libnova-0.15.0\/src\/libnova\/Makefile$
 libnova-0.15.0\/doc\/Makefile$
-libnova-0.15.0\/lntest\/libnovaconfig$
-libnova-0.15.0\/lntest\/.deps$
+libnova-0.15.0\/lntest\/libnovaconfig
+libnova-0.15.0\/lntest\/\.deps
 libnova-0.15.0\/lntest\/lntest$
 libnova-0.15.0\/lntest\/Makefile$
 libnova-0.15.0\/examples\/lunar$
@@ -74,21 +75,27 @@ libnova-0.15.0\/examples\/comet$
 libnova-0.15.0\/examples\/.deps$
 libnova-0.15.0\/examples\/asteroid$
 libnova-0.15.0\/examples\/Makefile$
-libnova-0.15.0\/autom4te\.cache\/$
-libnova-0.15.0\/examples\/\.libs\/$
+libnova-0.15.0\/autom4te\.cache
+libnova-0.15.0\/examples\/\.libs
 libnova-0.15.0\/examples\/asteroid$
 libnova-0.15.0\/examples\/comet$
 libnova-0.15.0\/examples\/lunar$
 libnova-0.15.0\/examples\/mars$
 libnova-0.15.0\/examples\/sun$
 libnova-0.15.0\/examples\/transforms$
-libnova-0.15.0\/lntest\/\.libs\/$
+libnova-0.15.0\/lntest\/\.libs\/
 libnova-0.15.0\/lntest\/libnovaconfig$
 libnova-0.15.0\/lntest\/lntest$
-libnova-0.15.0\/src\/\.libs\/$
+libnova-0.15.0\/src\/\.libs\/
 libnova-0.15.0\/src\/libnova\.la$
 libnova-0.15.0\/.*\.lo$
 libnova-0.15.0\/.*\/.*\.lo$
 XS\/Structs\.xs$
 ^MYMETA\.yml$
 ^MYMETA\.json$
+\.o$
+\.lo$
+\.la$
+\.a$
+\.Po$
+libnova-0\.15\.0\/doc\/doxyfile
