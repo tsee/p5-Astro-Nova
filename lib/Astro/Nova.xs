@@ -48,6 +48,47 @@
 
 MODULE = Astro::Nova		PACKAGE = Astro::Nova	PREFIX=ln_
 
+TYPEMAP: <<HERE
+struct ln_date*	O_OBJECT
+struct ln_dms* O_OBJECT
+struct ln_ell_orbit* O_OBJECT
+struct ln_equ_posn* O_OBJECT
+struct ln_gal_posn* O_OBJECT
+struct ln_helio_posn* O_OBJECT
+struct ln_hms* O_OBJECT
+struct ln_hrz_posn* O_OBJECT
+struct ln_hyp_orbit* O_OBJECT
+struct ln_lnlat_posn* O_OBJECT
+struct ln_nutation* O_OBJECT
+struct ln_par_orbit* O_OBJECT
+struct ln_rect_posn* O_OBJECT
+struct ln_rst_time* O_OBJECT
+struct ln_zonedate* O_OBJECT
+struct lnh_equ_posn* O_OBJECT
+struct lnh_hrz_posn* O_OBJECT
+struct lnh_lnlat_posn* O_OBJECT
+
+time_t	T_IV
+
+OUTPUT
+
+# The Perl object is blessed into 'CLASS', which should be a
+# char* having the name of the package for the blessing.
+O_OBJECT
+	sv_setref_pv( $arg, CLASS, (void*)$var );
+
+INPUT
+
+O_OBJECT
+	if( sv_isobject($arg) && (SvTYPE(SvRV($arg)) == SVt_PVMG) )
+		$var = ($type)SvIV((SV*)SvRV( $arg ));
+	else{
+		warn( \"${Package}::$func_name() -- $var is not a blessed SV reference\" );
+		XSRETURN_UNDEF;
+	}
+HERE
+
+
 INCLUDE: ../../XS/Structs.xs
 
 INCLUDE: ../../XS/Abberation.xs

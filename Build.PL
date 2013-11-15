@@ -21,7 +21,7 @@ Module::Build::AstroNova->new(
   },
   build_requires => {
     "ExtUtils::CBuilder" => "0.15",
-    "ExtUtils::Typemaps" => "3.00",
+    "ExtUtils::ParseXS" => "3.05",
     "Module::Build" => 0,
     "Test::More" => 0,
     "Cwd" => 0,

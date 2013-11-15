@@ -121,8 +121,6 @@ libnova-0.15.0/src/vsop87.c
 MANIFEST			This list of files
 META.json
 META.yml
-mytype.map
-perlobject.map
 ppport.h
 README
 t/01basic.t
