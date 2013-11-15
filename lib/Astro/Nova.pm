@@ -16,6 +16,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
     get_equ_aber
     get_ecl_aber
     get_airmass
+    get_alt_from_airmass
     get_angular_separation
     get_rel_posn_angle
     get_apparent_posn
@@ -274,7 +275,7 @@ Astro::Nova - Perl interface to libnova
 
 =head1 DESCRIPTION
 
-A libnova wrapper that includes a copy of libnova 0.13.0 itself for static linking.
+A libnova wrapper that includes a copy of libnova 0.15.0 itself for static linking.
 See L</COPYRIGHT AND LICENSE> for licensing details.
 The goal of this documentation is to document the Perl wrapper,
 not to reproduce the entire libnova documentation. Please find the documentation
@@ -305,6 +306,7 @@ The C<ln_> prefix has been stripped.
   
   airmass.h
     double get_airmass(double alt, double airmass_scale)
+    double get_alt_from_airmass(double X, double airmass_scale)
   
   angular_separation.h
     double get_angular_separation(Astro::Nova::EquPosn posn1, Astro::Nova::EquPosn posn2)
@@ -760,7 +762,7 @@ Steffen Mueller, E<lt>smueller@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-The Astro::Nova wrapper of libnova is copyright (C) 2009-2010 by Steffen Mueller.
+The Astro::Nova wrapper of libnova is copyright (C) 2009-2013 by Steffen Mueller.
 
 The wrapper code is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.0 or,

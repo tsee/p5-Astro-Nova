@@ -9,7 +9,7 @@ our @ISA = 'Module::Build';
 use File::Spec;
 use Config;
 
-our $NovaDir = 'libnova-0.13.0';
+our $NovaDir = 'libnova-0.15.0';
 our $NovaDirStaticLib = File::Spec->catfile($NovaDir, 'src', '.libs', 'libnova'.$Config::Config{lib_ext});
 our $Typemaps = ['mytype.map', 'perlobject.map'];
 

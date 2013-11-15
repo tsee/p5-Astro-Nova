@@ -58,6 +58,9 @@ ln_get_airmass(alt, airmass_scale)
   double alt
   double airmass_scale
 
+double ln_get_alt_from_airmass(double X, double airmass_scale)
+
+
 INCLUDE: ../../XS/AngularSeparation.xs
 
 INCLUDE: ../../XS/ApparentPosition.xs
