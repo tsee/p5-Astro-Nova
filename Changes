@@ -1,5 +1,8 @@
 Revision history for Perl extension Astro::Nova.
 
+0.07  Thu Nov 15 07:45 2013
+  - Upgrade to libnova 0.15.
+
 0.06  Sun Jan  3 13:50 2010
   - Better diagnostics during libnova patching for funny OS's.
   - New classes (with docs) for galactic cooridnates

@@ -6,7 +6,7 @@ use warnings;
 
 # note: internal modules loaded after XS below.
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 require Exporter;
 
