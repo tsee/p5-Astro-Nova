@@ -21,7 +21,7 @@ Module::Build::AstroNova->new(
   },
   build_requires => {
     "ExtUtils::CBuilder" => "0.15",
-    "ExtUtils::Typemap" => "0.03",
+    "ExtUtils::Typemaps" => "3.00",
     "Module::Build" => 0,
     "Test::More" => 0,
     "Cwd" => 0,
@@ -34,7 +34,6 @@ Module::Build::AstroNova->new(
   },
   dynamic_config => 0,
   meta_add => { distribution_type => "module" },
-  create_makefile_pl => "passthrough",
   add_to_cleanup => [ qw(XS/Structs.xs) ],
   create_readme => 1,
   include_dirs => ['.', File::Spec->catdir($Module::Build::AstroNova::NovaDir, 'src')],

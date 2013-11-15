@@ -65,17 +65,17 @@ sub ACTION_libnova {
 
 sub ACTION_fixtypemaps {
   my $self = shift;
-  require ExtUtils::Typemap;
+  require ExtUtils::Typemaps;
   if (-f 'typemap') {
     $self->log_warn("typemap exists... overwriting\n");
     unlink('typemap');
   }
-  my $typemap = ExtUtils::Typemap->new(file => 'typemap');
+  my $typemap = ExtUtils::Typemaps->new(file => 'typemap');
   $self->log_info("Merging typemaps to 'typemap'...\n");
   foreach my $typemap_file (@$Typemaps) {
     die "Can't find typemap file '$typemap_file'"
       if not -f $typemap_file;
-    $typemap->merge(typemap => ExtUtils::Typemap->new(file => $typemap_file));
+    $typemap->merge(typemap => ExtUtils::Typemaps->new(file => $typemap_file));
   }
   $typemap->write();
   $self->add_to_cleanup('typemap');
