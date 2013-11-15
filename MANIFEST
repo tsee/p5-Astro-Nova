@@ -22,6 +22,7 @@ libnova-0.15.0/configure
 libnova-0.15.0/configure.in
 libnova-0.15.0/COPYING
 libnova-0.15.0/depcomp
+libnova-0.15.0/doc/doxyfile.in
 libnova-0.15.0/doc/libnova-logo.jpg
 libnova-0.15.0/doc/Makefile.am
 libnova-0.15.0/doc/Makefile.in
